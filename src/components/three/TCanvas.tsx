@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { PostProcessing } from './postprocessing/PostProcessing';
 import { ScreenPlane } from './ScreenPlane';
 import { Simulator } from './Simulator';
+import { GlassControl } from './GlassControl';
+import { AudioController } from '../AudioController';
 
 export const TCanvas: FC = () => {
 	return (
@@ -20,6 +22,8 @@ export const TCanvas: FC = () => {
 				<Simulator />
 				<ScreenPlane />
 				<PostProcessing />
+				<GlassControl />
+				<AudioController />
 			</Suspense>
 		</Canvas>
 	)

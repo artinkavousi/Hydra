@@ -1,17 +1,28 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { css } from '@emotion/css';
-import { publicPath } from '../modules/utils';
-import { LinkIconButton } from './LinkIconButton';
 import { TCanvas } from './three/TCanvas';
+import { LevaControls } from './LevaControls';
+import { audioAnalyser } from './audio/audio';
+import { AnimatedCursor } from './AnimatedCursor';
+import { Leva } from 'leva';
 
+// App.tsx: Root component that initializes audio, shows controls, and renders the 3D canvas
 export const App: FC = () => {
+	useEffect(() => {
+		audioAnalyser.initialize();
+		return () => {
+			audioAnalyser.stopAnalysis();
+		};
+	}, []);
+
 	return (
 		<div className={styles.container}>
+			{/* Leva UI and Custom Controls */}
+			<Leva collapsed={false} />
+			<AnimatedCursor />
+			<LevaControls />
+			{/* 3D Canvas Scene */}
 			<TCanvas />
-			<LinkIconButton
-				imagePath={publicPath('/assets/icons/github.svg')}
-				linkPath="https://github.com/nemutas/r3f-water-drops"
-			/>
 		</div>
 	)
 }

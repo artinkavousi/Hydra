@@ -14,5 +14,20 @@ code {
 
 * {
 	box-sizing: border-box;
-	overflow: hidden;
+}
+
+/* Glassmorphism for Leva panel */
+.leva-root, .leva-c-kUOZpT {
+	background: rgba(30, 40, 60, 0.38) !important;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18) !important;
+	backdrop-filter: blur(18px) saturate(1.5) !important;
+	-webkit-backdrop-filter: blur(18px) saturate(1.5) !important;
+	border-radius: 18px !important;
+	border: 1.5px solid rgba(255,255,255,0.18) !important;
+	transition: background 0.3s, box-shadow 0.3s !important;
+}
+
+/* Optionally, make the panel more visually appealing */
+.leva-root *, .leva-c-kUOZpT * {
+	font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif !important;
 }

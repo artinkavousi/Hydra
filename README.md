@@ -38,3 +38,7 @@ This source code is not MIT License.
 ❌ Diversion is prohibited.（Incorporate all of the code into the project, etc.）<br>
 ✅ You can look at the application and reproduce the representation.<br>
 ✅ You can use parts of the code.
+
+# Reference Folder Notice
+
+The `/ref` directory contains reference projects and legacy code for inspiration or comparison only. It is **not** part of the main Vite/React application, is not built or served by Vite, and has no effect on the main app. You may open the HTML files in `/ref` directly in your browser if you wish to view them.
